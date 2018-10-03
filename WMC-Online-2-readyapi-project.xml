@@ -236,10 +236,12 @@
         </con:representation>
         <con:request name="Request 1" id="90a97344-cd20-464c-b10b-49b441fd5fee" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters>
             <con:entry key="iv-user" value=""/>
             <con:entry key="surrogateId" value=""/>
@@ -5557,22 +5559,42 @@
     <con:runType>SEQUENTIAL</con:runType>
     <con:properties>
       <con:property>
+        <con:name>NextYear</con:name>
+        <con:value>2019</con:value>
+      </con:property>
+      <con:property>
         <con:name>startDate</con:name>
-        <con:value>2018-09-27T16:29:56-07:00</con:value>
+        <con:value>2018-09-28T15:54:16-07:00</con:value>
       </con:property>
       <con:property>
         <con:name>endtDate</con:name>
-        <con:value>2019-09-27T16:29:56-07:00</con:value>
+        <con:value>2019-09-28T15:54:16-07:00</con:value>
       </con:property>
     </con:properties>
     <con:reportParameters/>
-    <con:testCase id="62c63dd9-09ea-4533-8878-c261f4cd07ce" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Client API Testing" searchProperties="true" timeout="0">
-      <con:description>Client API's</con:description>
+    <con:testCase id="1b9ad173-942c-4117-b0cc-aed08bad3a8f" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Groovy Scripts" searchProperties="true" timeout="0">
       <con:settings>
-        <con:setting id="62c63dd9-09ea-4533-8878-c261f4cd07cefileName">Client-API-Testing</con:setting>
+        <con:setting id="563fa1e5-81ae-4307-9ef8-daa6e41172fbfileName">Groovy-Scripts</con:setting>
       </con:settings>
       <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="groovy" name="Variables" id="2d0d9d88-d1dc-474e-98be-6c8c4a7c1782">
+      <con:testStep type="groovy" name="Define Next Year" id="99d0100b-562f-41f9-818f-6cd996eefd79">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.time.TimeCategory
+
+def acceptedFormat = "yyyy-MM-dd"
+def today = new Date()
+def currentdate = today.format(acceptedFormat)
+
+use(TimeCategory) {
+    def oneYear = today + 1.year
+    def NextYear =  oneYear.format("yyyy")
+    testRunner.testCase.testSuite.setPropertyValue("NextYear", NextYear)
+    
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Define Start and End Dates" id="caa579e1-aab6-4e92-bf4d-e75c2031b328">
         <con:settings/>
         <con:config>
           <script>//Defining startDate and endDate input properties for PAC Post and Patch API's
@@ -5586,8 +5608,9 @@ NewSystemDate  = SystemDate + "-07:00"
 log.info NewSystemDate
 
 //Defining endDate
+String  NextYear  = testRunner.testCase.testSuite.getPropertyValue("NextYear")
 String NextDate = date.format("MM-dd'T'HH:mm:ss")
-NewNextDate = "2019-" + NextDate + "-07:00"
+NewNextDate = NextYear + "-" + NextDate + "-07:00"
 log.info NewNextDate
 
 
@@ -5595,6 +5618,31 @@ testRunner.testCase.testSuite.setPropertyValue("startDate", NewSystemDate)
 testRunner.testCase.testSuite.setPropertyValue("endtDate", NewNextDate)</script>
         </con:config>
       </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>5a8b54b3-b344-436e-a7e3-fe9a6e77bab7</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:environmentSpec>
+        <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7127127b-2a04-4502-bd04-107c64c31d99">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:testCase>
+    <con:testCase id="62c63dd9-09ea-4533-8878-c261f4cd07ce" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Client API Testing" searchProperties="true" timeout="0">
+      <con:description>Client API's</con:description>
+      <con:settings>
+        <con:setting id="62c63dd9-09ea-4533-8878-c261f4cd07cefileName">Client-API-Testing</con:setting>
+      </con:settings>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
       <con:testStep type="restrequest" name="AccountsGet" id="3d526cdd-a2d1-456a-9b2d-5e51ff4fb1f6">
         <con:settings/>
         <con:config service="Fund Transfer V1-20180716" methodName="V1ClientAccountsGet" resourcePath="/v1/client/Accounts" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -6064,7 +6112,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
             <con:parameters>
               <con:entry key="iv-user" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="764"/>
+              <con:entry key="id" value="786"/>
             </con:parameters>
             <con:parameterOrder>
               <con:entry>id</con:entry>
@@ -6159,7 +6207,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
             <con:parameters>
               <con:entry key="iv-user" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="764"/>
+              <con:entry key="id" value="786"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -6545,7 +6593,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:entry key="iv-user" value="saimaple\331453704"/>
               <con:entry key="surrogateId" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="765"/>
+              <con:entry key="id" value="830"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -6621,7 +6669,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:entry key="iv-user" value="saimaple\331453704"/>
               <con:entry key="surrogateId" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="765"/>
+              <con:entry key="id" value="830"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -6702,20 +6750,24 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
     <con:runType>SEQUENTIAL</con:runType>
     <con:properties>
       <con:property>
+        <con:name>NextYear</con:name>
+        <con:value>2019</con:value>
+      </con:property>
+      <con:property>
         <con:name>startDate</con:name>
-        <con:value>2018-09-27T16:30:13-07:00</con:value>
+        <con:value>2018-09-28T15:52:20-07:00</con:value>
       </con:property>
       <con:property>
         <con:name>endtDate</con:name>
-        <con:value>2019-09-27T16:30:13-07:00</con:value>
+        <con:value>2019-09-28T15:52:20-07:00</con:value>
       </con:property>
       <con:property>
         <con:name>PACID-1</con:name>
-        <con:value>768</con:value>
+        <con:value>828</con:value>
       </con:property>
       <con:property>
         <con:name>PACID-2</con:name>
-        <con:value>769</con:value>
+        <con:value>829</con:value>
       </con:property>
     </con:properties>
     <con:reportParameters/>
@@ -6724,7 +6776,24 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
         <con:setting id="563fa1e5-81ae-4307-9ef8-daa6e41172fbfileName">Groovy-Scripts</con:setting>
       </con:settings>
       <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="groovy" name="Variables" id="74d28f82-454c-43bc-a069-9024719e21b9">
+      <con:testStep type="groovy" name="Define Next Year" id="5a8b54b3-b344-436e-a7e3-fe9a6e77bab7">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.time.TimeCategory
+
+def acceptedFormat = "yyyy-MM-dd"
+def today = new Date()
+def currentdate = today.format(acceptedFormat)
+
+use(TimeCategory) {
+    def oneYear = today + 1.year
+    def NextYear =  oneYear.format("yyyy")
+    testRunner.testCase.testSuite.setPropertyValue("NextYear", NextYear)
+    
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Define Start and End Date" id="74d28f82-454c-43bc-a069-9024719e21b9">
         <con:settings/>
         <con:config>
           <script>//Defining startDate and endDate input properties for PAC Post and Patch API's
@@ -6738,8 +6807,9 @@ NewSystemDate  = SystemDate + "-07:00"
 log.info NewSystemDate
 
 //Defining endDate
+String  NextYear  = testRunner.testCase.testSuite.getPropertyValue("NextYear")
 String NextDate = date.format("MM-dd'T'HH:mm:ss")
-NewNextDate = "2019-" + NextDate + "-07:00"
+NewNextDate = NextYear + "-" + NextDate + "-07:00"
 log.info NewNextDate
 
 
@@ -6749,6 +6819,11 @@ testRunner.testCase.testSuite.setPropertyValue("endtDate", NewNextDate)</script>
       </con:testStep>
       <con:properties/>
       <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>5a8b54b3-b344-436e-a7e3-fe9a6e77bab7</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
       <con:environmentSpec>
         <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
           <con:authProfile>Inherit From Parent</con:authProfile>
@@ -6889,10 +6964,17 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Grid">
             <con:configuration>
-              <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry></xml-fragment>]]></check>
+              <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry></xml-fragment>]]></check>
               <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">3E7912E7157E78343940927E850684E5B538CED188361C1A877502334F384EC2</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
               <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">71F53010865D957A8B924E791750A33FEB6C5CFE552AE35EF45857AEA09E585C</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
               <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">DFDCF82769E36FABDCFD981B2D33B3FFDCCD77074FBAE49FA6C865F01B30A4FD</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">7126475D84269C530F1441BC593631891F0782E539CCE06B34FC40BC51C13011</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">1A81FF9E8DC3E3CA3E26C129C2F1AC5E7EAA2A493D0DB469C2E857C8E51CC41A</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
+              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
               <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
               <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
               <recognizeAsPlainText>true</recognizeAsPlainText>
@@ -6905,7 +6987,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
           <con:property>IV-USER</con:property>
           <con:property>CHANNEL</con:property>
           <con:startRow>0</con:startRow>
-          <con:endRow>2</con:endRow>
+          <con:endRow>5</con:endRow>
           <con:recordsPerIteration>1</con:recordsPerIteration>
           <con:completeLastOperation>true</con:completeLastOperation>
           <con:trimValues>false</con:trimValues>
@@ -6942,7 +7024,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
 assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []):"Assertion failed, Got Null Response"</scriptText>
               </con:configuration>
             </con:assertion>
-            <con:assertion type="GroovyScriptAssertion" id="204700db-b091-4443-a9bd-1233617ffea1" name="Script Assertion to check value not null">
+            <con:assertion type="GroovyScriptAssertion" id="204700db-b091-4443-a9bd-1233617ffea1" name="Script Assertion to check value not null" disabled="true">
               <con:configuration>
                 <scriptText><![CDATA[//declare namespace ns1='https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Accounts/44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB/availableFunds/transfer';
 //ns1:Response[1]/ns1:accountNumber[1]
@@ -7002,7 +7084,7 @@ assert (timestamp != null) && (timestamp != "") && (AccNo != null) && (AccNo != 
         <con:settings/>
         <con:config>
           <dataSourceStep>DataSource</dataSourceStep>
-          <targetStep>AccountsByTokenAvailableFundsByTypeGet</targetStep>
+          <targetStep>02.01 ClientAccountsByTokenAvailableFundsByTypeGet</targetStep>
           <discardResults>true</discardResults>
         </con:config>
       </con:testStep>
@@ -7922,7 +8004,7 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
         <con:config>
           <script>def project = testRunner.testCase.testSuite.project
 testRunner.runTestStep( project.testSuites['Automation_Testing'].testCases['06 ClientPreauthorizedGet'].testSteps['06.01 ClientPreauthorizedGet'] )
-testRunner.runTestStep( project.testSuites['Automation_Testing'].testCases['06 ClientPreauthorizedGet'].testSteps['PropertyTransfer 1'] )
+testRunner.runTestStep( project.testSuites['Automation_Testing'].testCases['06 ClientPreauthorizedGet'].testSteps["PropertyTransfer 1"] )
 testRunner.runTestStep( project.testSuites['Automation_Testing'].testCases['08 ClientPreauthorizedByIdDelete'].testSteps['08.01 ClientPreauthorizedByIdDelete'] )</script>
         </con:config>
       </con:testStep>
@@ -8042,7 +8124,7 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
         <con:config>
           <script>def project = testRunner.testCase.testSuite.project
 testRunner.runTestStep( project.testSuites['Automation_Testing'].testCases['06 ClientPreauthorizedGet'].testSteps['06.01 ClientPreauthorizedGet'] )
-testRunner.runTestStep( project.testSuites['Automation_Testing'].testCases['06 ClientPreauthorizedGet'].testSteps['PropertyTransfer 1'] )
+testRunner.runTestStep( project.testSuites['Automation_Testing'].testCases['06 ClientPreauthorizedGet'].testSteps["PropertyTransfer 1"] )
 testRunner.runTestStep( project.testSuites['Automation_Testing'].testCases['08 ClientPreauthorizedByIdDelete'].testSteps['08.01 ClientPreauthorizedByIdDelete'] )</script>
         </con:config>
       </con:testStep>
@@ -9178,21 +9260,18 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
           </con:restRequest>
         </con:config>
       </con:testStep>
-      <con:testStep type="transfer" name="Property Transfer 2" id="11a228d4-c24b-46b9-8537-fd63b7f6c485">
+      <con:testStep type="groovy" name="PACID2_Transfer" id="a22ee279-0c79-4bd7-8cde-10dd553ae60c">
         <con:settings/>
-        <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false">
-            <con:name>pacInstructionId</con:name>
-            <con:sourceType>Response</con:sourceType>
-            <con:sourceStep>11.01 AdminClientBySurrogateIdPreauthorizedGet</con:sourceStep>
-            <con:sourcePath>$[0]['pacInstructionId']</con:sourcePath>
-            <con:targetType>PACID-2</con:targetType>
-            <con:targetStep>#TestSuite#</con:targetStep>
-            <con:targetPath/>
-            <con:type>JSONPATH</con:type>
-            <con:targetTransferType>JSONPATH</con:targetTransferType>
-            <con:upgraded>true</con:upgraded>
-          </con:transfers>
+        <con:config>
+          <script>//Response[1]/e[1]/orderDate[1]
+
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context )
+def holder = groovyUtils.getXmlHolder(testRunner.testCase.testSteps["11.01 AdminClientBySurrogateIdPreauthorizedGet"].testRequest.response.getContentAsXml())
+
+pacInstructionId = holder.getNodeValue("Response[1]/e[1]/pacInstructionId[1]")
+
+//Passing PACID value to Testset Properties
+testRunner.testCase.testSuite.setPropertyValue("PACID-2", pacInstructionId)</script>
         </con:config>
       </con:testStep>
       <con:properties/>
@@ -9484,7 +9563,7 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
     <con:settings/>
     <con:savedRecentRuns>1</con:savedRecentRuns>
     <con:runType>SEQUENTIAL</con:runType>
-    <con:testCase id="979c66d4-0aa9-47b0-b29b-f202691b6dd4" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Copy of 06 ClientPreauthorizedGet" searchProperties="true" timeout="0">
+    <con:testCase id="979c66d4-0aa9-47b0-b29b-f202691b6dd4" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Testcases" searchProperties="true" timeout="0">
       <con:settings>
         <con:setting id="ac01e96c-7479-4e0a-9de7-68ac6ef3bb13fileName">06-ClientPreauthorizedGet</con:setting>
       </con:settings>
@@ -9592,27 +9671,10 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
           </con:restRequest>
         </con:config>
       </con:testStep>
-      <con:properties/>
-      <con:reportParameters/>
-      <con:environmentSpec>
-        <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
-          <con:authProfile>Inherit From Parent</con:authProfile>
-        </con:entry>
-        <con:entry environmentId="7127127b-2a04-4502-bd04-107c64c31d99">
-          <con:authProfile>Inherit From Parent</con:authProfile>
-        </con:entry>
-        <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
-          <con:authProfile>Inherit From Parent</con:authProfile>
-        </con:entry>
-      </con:environmentSpec>
-    </con:testCase>
-    <con:testCase id="3fe60258-9786-46d5-9d9e-64cc850d10ee" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Copy of Client API Testing" searchProperties="true" timeout="0">
-      <con:settings/>
-      <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="restrequest" name="Copy of PreauthorizedByIdDelete" id="071eb27d-fa97-475c-abc4-b45648e309c2">
+      <con:testStep type="restrequest" name="PreauthorizedByIdDelete" id="071eb27d-fa97-475c-abc4-b45648e309c2">
         <con:settings/>
         <con:config service="Fund Transfer V1-20180716" methodName="V1ClientPreauthorizedByIdDelete" resourcePath="/v1/client/Preauthorized/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="Copy of PreauthorizedByIdDelete" id="7226641f-8944-4e68-b371-c94eb8669eb0" mediaType="application/json" postQueryString="false">
+          <con:restRequest name="PreauthorizedByIdDelete" id="7226641f-8944-4e68-b371-c94eb8669eb0" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
@@ -9663,7 +9725,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
             <con:parameters>
               <con:entry key="iv-user" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="725"/>
+              <con:entry key="id" value="824"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -9684,7 +9746,15 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
       </con:testStep>
       <con:properties/>
       <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>cc454e42-806e-4d6e-8be2-8bbce4aeadee</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
       <con:environmentSpec>
+        <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
         <con:entry environmentId="7127127b-2a04-4502-bd04-107c64c31d99">
           <con:authProfile>Inherit From Parent</con:authProfile>
         </con:entry>
@@ -9693,7 +9763,85 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
         </con:entry>
       </con:environmentSpec>
     </con:testCase>
-    <con:properties/>
+    <con:testCase id="3d0bcfaa-fe51-4e85-9ce5-598ae9ba9df6" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Groovy Scripts" searchProperties="true" timeout="0">
+      <con:settings>
+        <con:setting id="563fa1e5-81ae-4307-9ef8-daa6e41172fbfileName">Groovy-Scripts</con:setting>
+      </con:settings>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="groovy" name="Define Next Year" id="9040f03f-bba0-4cc8-9eee-237c6463d2e5">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.time.TimeCategory
+
+def acceptedFormat = "yyyy-MM-dd"
+def today = new Date()
+def currentdate = today.format(acceptedFormat)
+
+use(TimeCategory) {
+    def oneYear = today + 1.year
+    def NextYear =  oneYear.format("yyyy")
+    testRunner.testCase.testSuite.setPropertyValue("NextYear", NextYear)
+    
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Variables" id="eae8f47c-9d40-40fa-a94f-540ddee6efd7">
+        <con:settings/>
+        <con:config>
+          <script>//Defining startDate and endDate input properties for PAC Post and Patch API's
+
+Date date= new Date()
+
+//Defining startDate
+//String SystemDate=date.format("yyyy-MM-dd'T'HH:mm:ssXXX")
+String SystemDate=date.format("yyyy-MM-dd'T'HH:mm:ss")
+NewSystemDate  = SystemDate + "-07:00"
+log.info NewSystemDate
+
+//Defining endDate
+String  NextYear  = testRunner.testCase.testSuite.getPropertyValue("NextYear")
+String NextDate = date.format("MM-dd'T'HH:mm:ss")
+NewNextDate = NextYear+ "-" + NextDate + "-07:00"
+log.info NewNextDate
+
+
+testRunner.testCase.testSuite.setPropertyValue("startDate", NewSystemDate)
+testRunner.testCase.testSuite.setPropertyValue("endtDate", NewNextDate)</script>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>5a8b54b3-b344-436e-a7e3-fe9a6e77bab7</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:environmentSpec>
+        <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="7127127b-2a04-4502-bd04-107c64c31d99">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+        <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+          <con:authProfile>Inherit From Parent</con:authProfile>
+        </con:entry>
+      </con:environmentSpec>
+    </con:testCase>
+    <con:properties>
+      <con:property>
+        <con:name>NextYear</con:name>
+        <con:value>2019</con:value>
+      </con:property>
+      <con:property>
+        <con:name>startDate</con:name>
+        <con:value>2018-09-28T12:56:39-07:00</con:value>
+      </con:property>
+      <con:property>
+        <con:name>endtDate</con:name>
+        <con:value>2019-09-28T12:56:39-07:00</con:value>
+      </con:property>
+    </con:properties>
     <con:reportParameters/>
     <con:environmentSpec>
       <con:entry environmentId="7127127b-2a04-4502-bd04-107c64c31d99">
