@@ -14,7 +14,24 @@
   </con:vcsConfiguration>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:requirements/>
-  <con:properties/>
+  <con:properties>
+    <con:property>
+      <con:name>Endpoint</con:name>
+      <con:value>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:value>
+    </con:property>
+    <con:property>
+      <con:name>NextYear</con:name>
+      <con:value>2019</con:value>
+    </con:property>
+    <con:property>
+      <con:name>startDate</con:name>
+      <con:value>2018-10-01T14:22:42-07:00</con:value>
+    </con:property>
+    <con:property>
+      <con:name>endtDate</con:name>
+      <con:value>2019-10-01T14:22:42-07:00</con:value>
+    </con:property>
+  </con:properties>
   <con:wssContainer/>
   <con:databaseConnectionContainer/>
   <con:jmsConnectionContainer/>
@@ -62,6 +79,22 @@
     <con:service type="REST" name="Fund Transfer V1-20180917">
       <con:endpoint authProfile="No Authorization"/>
     </con:service>
+    <con:property>
+      <con:name>Endpoint</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>NextYear</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>startDate</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>endtDate</con:name>
+      <con:value/>
+    </con:property>
     <con:databaseConnectionContainer/>
     <con:jmsConnectionContainer/>
   </con:environment>
@@ -436,10 +469,12 @@
         </con:representation>
         <con:request name="Request 1" id="6e7c684f-4230-42d2-b511-14b197937857" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters>
             <con:entry key="iv-user" value=""/>
             <con:entry key="surrogateId" value=""/>
@@ -1126,10 +1161,12 @@
         </con:representation>
         <con:request name="Request 1" id="c7459537-8d22-4df0-a904-8863941f0d5b" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters>
             <con:entry key="iv-user" value=""/>
             <con:entry key="surrogateId" value=""/>
@@ -1493,10 +1530,12 @@
         </con:representation>
         <con:request name="Request 1" id="0f62aa6b-b9d2-4d0d-96fd-968bf46e15d8" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters>
             <con:entry key="iv-user" value=""/>
             <con:entry key="channel" value=""/>
@@ -1661,10 +1700,12 @@
         </con:representation>
         <con:request name="Request 1" id="92293b7d-a7b0-4fc9-b9e7-d773be4a24a0" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters>
             <con:entry key="iv-user" value=""/>
             <con:entry key="channel" value=""/>
@@ -1880,6 +1921,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters>
             <con:entry key="iv-user" value=""/>
             <con:entry key="channel" value=""/>
@@ -1920,6 +1962,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters>
             <con:entry key="iv-user" value=""/>
             <con:entry key="channel" value=""/>
@@ -1950,6 +1993,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters>
             <con:entry key="iv-user" value=""/>
             <con:entry key="channel" value=""/>
@@ -1980,6 +2024,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters>
             <con:entry key="iv-user" value=""/>
             <con:entry key="channel" value=""/>
@@ -2545,10 +2590,12 @@
         </con:representation>
         <con:request name="Request 1" id="fdb3d615-2605-4bae-8a6e-0a61fb363722" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters>
             <con:entry key="iv-user" value=""/>
             <con:entry key="channel" value=""/>
@@ -2967,10 +3014,12 @@
         </con:representation>
         <con:request name="Request 1" id="72f7df8b-894e-4e58-bb52-bea0c24951a5" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:environmentSpec>
             <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -3149,10 +3198,12 @@
         </con:representation>
         <con:request name="Request 1" id="bb32034b-d2c4-4132-993a-106604fe5c28" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:environmentSpec>
             <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -3306,10 +3357,12 @@
         </con:representation>
         <con:request name="Request 1" id="95aa2320-1bfa-437d-8434-85a51c13af3b" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:environmentSpec>
             <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -3509,6 +3562,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>id</con:entry>
@@ -3547,6 +3601,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>id</con:entry>
@@ -3576,6 +3631,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>id</con:entry>
@@ -3605,6 +3661,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>id</con:entry>
@@ -3783,10 +3840,12 @@
         </con:representation>
         <con:request name="Request 1" id="4c1b1226-27f1-4a6b-a2cd-6a4499bdd1e4" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:environmentSpec>
             <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -3958,10 +4017,12 @@
         </con:representation>
         <con:request name="Request 1" id="ec300565-dc40-4ca6-8d10-0e55afbc1b0b" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:environmentSpec>
             <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -4124,10 +4185,12 @@
         </con:representation>
         <con:request name="Request 1" id="13942b68-3b25-44b8-8de6-d28f964ab1af" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:environmentSpec>
             <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -4285,10 +4348,12 @@
         </con:representation>
         <con:request name="Request 1" id="3956884d-2cba-4f1c-b130-eb090233c931" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:environmentSpec>
             <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -4497,6 +4562,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>iv-user</con:entry>
@@ -4534,6 +4600,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>iv-user</con:entry>
@@ -4561,6 +4628,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>iv-user</con:entry>
@@ -4588,6 +4656,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>iv-user</con:entry>
@@ -4740,10 +4809,12 @@
         </con:representation>
         <con:request name="Request 1" id="4abbadb5-3d84-4e16-9a09-eab4c7cfc055" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:environmentSpec>
             <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -4943,6 +5014,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>id</con:entry>
@@ -4980,6 +5052,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>id</con:entry>
@@ -5008,6 +5081,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>id</con:entry>
@@ -5036,6 +5110,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>id</con:entry>
@@ -5207,10 +5282,12 @@
         </con:representation>
         <con:request name="Request 1" id="e81a00b8-ad27-4ecb-bb1d-7b988a8531b0" mediaType="application/json">
           <con:settings/>
+          <con:request/>
           <con:credentials>
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:environmentSpec>
             <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -5410,6 +5487,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>iv-user</con:entry>
@@ -5446,6 +5524,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>iv-user</con:entry>
@@ -5473,6 +5552,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>iv-user</con:entry>
@@ -5500,6 +5580,7 @@
             <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
             <con:authType>No Authorization</con:authType>
           </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
           <con:parameters/>
           <con:parameterOrder>
             <con:entry>iv-user</con:entry>
@@ -5545,6 +5626,74 @@
       </con:environmentSpec>
     </con:resource>
   </con:interface>
+  <con:testSuite id="fd1f1e03-0e84-4259-80f8-6b28de99166d" name="Groovy Scripts">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="c40eb6d6-667a-44a5-97a9-653db0d6a533" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Define Properties" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="groovy" name="Reading Endpoint from Datasheet" id="d67191c4-91fb-4d3c-90fe-74588f92004d">
+        <con:settings/>
+        <con:config>
+          <script>import jxl.*
+import jxl.write.*
+
+Workbook workbook1 = Workbook.getWorkbook(new File("C:/APIData/N600_FT_API_Data_Sheet.xls"))
+sheet1 = workbook1.getSheet("MasterSheet")
+Cell a1 = sheet1.getCell(1,18)
+log.info a1.getContents()
+workbook1.close()
+testRunner.testCase.testSuite.project.setPropertyValue("Endpoint", a1.getContents())</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Define Next Year" id="f265a035-ead2-44f1-a2a5-24018f380dd3">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.time.TimeCategory
+
+def acceptedFormat = "yyyy-MM-dd"
+def today = new Date()
+def currentdate = today.format(acceptedFormat)
+
+use(TimeCategory) {
+    def oneYear = today + 1.year
+    def NextYear =  oneYear.format("yyyy")
+    testRunner.testCase.testSuite.project.setPropertyValue("NextYear", NextYear)
+    
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Define Start and End Dates" id="d39bf334-eee4-4622-87e5-c339bf8f8d60">
+        <con:settings/>
+        <con:config>
+          <script>//Defining startDate and endDate input properties for PAC Post and Patch API's
+
+Date date= new Date()
+
+//Defining startDate
+//String SystemDate=date.format("yyyy-MM-dd'T'HH:mm:ssXXX")
+String SystemDate=date.format("yyyy-MM-dd'T'HH:mm:ss")
+NewSystemDate  = SystemDate + "-07:00"
+log.info NewSystemDate
+
+//Defining endDate
+String  NextYear  = testRunner.testCase.testSuite.project.getPropertyValue("NextYear")
+String NextDate = date.format("MM-dd'T'HH:mm:ss")
+NewNextDate = NextYear + "-" + NextDate + "-07:00"
+log.info NewNextDate
+
+
+testRunner.testCase.testSuite.project.setPropertyValue("startDate", NewSystemDate)
+testRunner.testCase.testSuite.project.setPropertyValue("endtDate", NewNextDate)</script>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
   <con:testSuite id="96c33eb3-791f-4b77-b5a6-3e9759213894" name="Smoke Testing">
     <con:description>Smoke Testing of API's</con:description>
     <con:settings>
@@ -5564,11 +5713,11 @@
       </con:property>
       <con:property>
         <con:name>startDate</con:name>
-        <con:value>2018-09-28T15:54:16-07:00</con:value>
+        <con:value>2018-10-01T14:04:45-07:00</con:value>
       </con:property>
       <con:property>
         <con:name>endtDate</con:name>
-        <con:value>2019-09-28T15:54:16-07:00</con:value>
+        <con:value>2019-10-01T14:04:45-07:00</con:value>
       </con:property>
     </con:properties>
     <con:reportParameters/>
@@ -5577,7 +5726,7 @@
         <con:setting id="563fa1e5-81ae-4307-9ef8-daa6e41172fbfileName">Groovy-Scripts</con:setting>
       </con:settings>
       <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="groovy" name="Define Next Year" id="99d0100b-562f-41f9-818f-6cd996eefd79">
+      <con:testStep type="groovy" name="Define Next Year" id="99d0100b-562f-41f9-818f-6cd996eefd79" disabled="true">
         <con:settings/>
         <con:config>
           <script>import groovy.time.TimeCategory
@@ -5594,7 +5743,7 @@ use(TimeCategory) {
 }</script>
         </con:config>
       </con:testStep>
-      <con:testStep type="groovy" name="Define Start and End Dates" id="caa579e1-aab6-4e92-bf4d-e75c2031b328">
+      <con:testStep type="groovy" name="Define Start and End Dates" id="caa579e1-aab6-4e92-bf4d-e75c2031b328" disabled="true">
         <con:settings/>
         <con:config>
           <script>//Defining startDate and endDate input properties for PAC Post and Patch API's
@@ -5651,7 +5800,7 @@ testRunner.testCase.testSuite.setPropertyValue("endtDate", NewNextDate)</script>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Accounts</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" id="45a71cd3-48ec-49bd-85e8-9b6bad65e764" name="Invalid HTTP Status Codes">
@@ -5708,7 +5857,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Accounts/44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB/availableFunds/transfer</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" id="72e75738-bfeb-401d-a970-a74d6b264d90" name="Invalid HTTP Status Codes">
@@ -5765,14 +5914,14 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
           </con:restRequest>
         </con:config>
       </con:testStep>
-      <con:testStep type="restrequest" name="FundTransferPost" id="60b074d1-a06e-4b61-bc1b-ceb0161aa72e">
+      <con:testStep type="restrequest" name="FundTransferPost" id="60b074d1-a06e-4b61-bc1b-ceb0161aa72e" disabled="true">
         <con:settings/>
         <con:config service="Fund Transfer V1-20180716" resourcePath="/v1/client/FundTransfer" methodName="V1ClientFundTransferPost" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:restRequest name="FundTransferPost" id="0f1223ea-8724-4cac-97af-c054c07c923a" mediaType="application/json" postQueryString="false">
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request>{\r
   "fromAccountToken" : "44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB",\r
   "toAccountToken" : "8897ABFD46853763BE5099F6C2C4B30D852EA7B244D36035B9F2A0E92C5165D1",\r
@@ -5858,7 +6007,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/FundTransfer/history</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" id="d0872d75-741a-48dc-971f-dad33f5d4c80" name="Invalid HTTP Status Codes">
@@ -5911,15 +6060,15 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request>{\r
    "fromAccountToken" : "44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB",\r
    "toAccountToken" : "8897ABFD46853763BE5099F6C2C4B30D852EA7B244D36035B9F2A0E92C5165D1",\r
    "amount" : 50,\r
    "frequency" : "Monthly",\r
    "rspType" : "Regular",\r
-   "startDate" : "${#TestSuite#startDate}",\r
-   "endDate" : "${#TestSuite#endtDate}",\r
+   "startDate" : "${#Project#startDate}",\r
+   "endDate" : "${#Project#endtDate}",\r
    "numberOfTimes" : null\r
 }</con:request>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized</con:originalUri>
@@ -5978,7 +6127,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" id="a42f7142-fd75-4d1d-8f56-ba9bc9e1324f" name="Invalid HTTP Status Codes">
@@ -6066,15 +6215,15 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request>{\r
    "fromAccountToken" : "44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB",\r
    "toAccountToken" : "8897ABFD46853763BE5099F6C2C4B30D852EA7B244D36035B9F2A0E92C5165D1",\r
    "amount" : 25,\r
    "frequency" : "Weekly",\r
    "rspType" : "Regular",\r
-   "startDate" : "${#TestSuite#startDate}",\r
-   "endDate" : "${#TestSuite#endtDate}",\r
+   "startDate" : "${#Project#startDate}",\r
+   "endDate" : "${#Project#endtDate}",\r
    "numberOfTimes" : null\r
 }</con:request>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized/</con:originalUri>
@@ -6112,7 +6261,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
             <con:parameters>
               <con:entry key="iv-user" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="786"/>
+              <con:entry key="id" value="10795"/>
             </con:parameters>
             <con:parameterOrder>
               <con:entry>id</con:entry>
@@ -6161,7 +6310,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized/</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" id="0714f33e-5e4d-4027-885d-88474d45bfe0" name="Invalid HTTP Status Codes">
@@ -6207,7 +6356,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
             <con:parameters>
               <con:entry key="iv-user" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="786"/>
+              <con:entry key="id" value="10795"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -6263,6 +6412,11 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
         <con:status>NONE</con:status>
         <con:properties/>
       </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>80e0c226-5350-444d-bcf7-c938f7481d9c</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
       <con:environmentSpec>
         <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
           <con:authProfile>Inherit From Parent</con:authProfile>
@@ -6289,7 +6443,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/admin/client/Accounts</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes" id="fd744998-97fb-49a5-a471-cd1d4763c688">
@@ -6347,7 +6501,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/admin/client/4519003153690821/FundTransfer/history</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes" id="f10bf023-653b-4972-9456-a24bc208d2c3">
@@ -6407,15 +6561,15 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request>{\r
    "fromAccountToken" : "44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB",\r
    "toAccountToken" : "8897ABFD46853763BE5099F6C2C4B30D852EA7B244D36035B9F2A0E92C5165D1",\r
    "amount" : 50,\r
    "frequency" : "Monthly",\r
    "rspType" : "Regular",\r
-   "startDate" : "${#TestSuite#startDate}",\r
-   "endDate" : "${#TestSuite#endtDate}",\r
+   "startDate" : "${#Project#startDate}",\r
+   "endDate" : "${#Project#endtDate}",\r
    "numberOfTimes" : null\r
 }</con:request>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized</con:originalUri>
@@ -6477,7 +6631,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/admin/client/4519003153690821/Preauthorized</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes" id="6f4b192c-3328-441b-9011-631cbd857d4d">
@@ -6552,16 +6706,16 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
-            <con:request>{
-   "fromAccountToken" : "44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB",
-   "toAccountToken" : "8897ABFD46853763BE5099F6C2C4B30D852EA7B244D36035B9F2A0E92C5165D1",
-   "amount" : 25,
-   "frequency" : "Weekly",
-   "rspType" : "Regular",
-   "startDate" : "${#TestSuite#startDate}",
-   "endDate" : "${#TestSuite#endtDate}",
-   "numberOfTimes" : null
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
+            <con:request>{\r
+   "fromAccountToken" : "44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB",\r
+   "toAccountToken" : "8897ABFD46853763BE5099F6C2C4B30D852EA7B244D36035B9F2A0E92C5165D1",\r
+   "amount" : 25,\r
+   "frequency" : "Weekly",\r
+   "rspType" : "Regular",\r
+   "startDate" : "${#Project#startDate}",\r
+   "endDate" : "${#Project#endtDate}",\r
+   "numberOfTimes" : null\r
 }</con:request>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes" id="265f3eee-65e3-4d15-b144-d4b07f077618">
@@ -6593,7 +6747,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:entry key="iv-user" value="saimaple\331453704"/>
               <con:entry key="surrogateId" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="830"/>
+              <con:entry key="id" value="10796"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -6637,7 +6791,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes" id="141c0c4b-710e-4a9d-84a6-0f2a09555df5">
@@ -6669,7 +6823,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:entry key="iv-user" value="saimaple\331453704"/>
               <con:entry key="surrogateId" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="830"/>
+              <con:entry key="id" value="10796"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -6755,19 +6909,19 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
       </con:property>
       <con:property>
         <con:name>startDate</con:name>
-        <con:value>2018-09-28T15:52:20-07:00</con:value>
+        <con:value>2018-10-01T14:04:47-07:00</con:value>
       </con:property>
       <con:property>
         <con:name>endtDate</con:name>
-        <con:value>2019-09-28T15:52:20-07:00</con:value>
+        <con:value>2019-10-01T14:04:47-07:00</con:value>
       </con:property>
       <con:property>
         <con:name>PACID-1</con:name>
-        <con:value>828</con:value>
+        <con:value>10798</con:value>
       </con:property>
       <con:property>
         <con:name>PACID-2</con:name>
-        <con:value>829</con:value>
+        <con:value>10800</con:value>
       </con:property>
     </con:properties>
     <con:reportParameters/>
@@ -6776,7 +6930,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
         <con:setting id="563fa1e5-81ae-4307-9ef8-daa6e41172fbfileName">Groovy-Scripts</con:setting>
       </con:settings>
       <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="groovy" name="Define Next Year" id="5a8b54b3-b344-436e-a7e3-fe9a6e77bab7">
+      <con:testStep type="groovy" name="Define Next Year" id="5a8b54b3-b344-436e-a7e3-fe9a6e77bab7" disabled="true">
         <con:settings/>
         <con:config>
           <script>import groovy.time.TimeCategory
@@ -6793,7 +6947,7 @@ use(TimeCategory) {
 }</script>
         </con:config>
       </con:testStep>
-      <con:testStep type="groovy" name="Define Start and End Date" id="74d28f82-454c-43bc-a069-9024719e21b9">
+      <con:testStep type="groovy" name="Define Start and End Date" id="74d28f82-454c-43bc-a069-9024719e21b9" disabled="true">
         <con:settings/>
         <con:config>
           <script>//Defining startDate and endDate input properties for PAC Post and Patch API's
@@ -6844,22 +6998,21 @@ testRunner.testCase.testSuite.setPropertyValue("endtDate", NewNextDate)</script>
       <con:testStep type="datasource" name="DataSource" id="6b4e89f1-a1b7-4477-8e21-e4598c193f91">
         <con:settings/>
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:dataSource type="Grid">
+          <con:dataSource type="Excel">
             <con:configuration>
-              <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry></xml-fragment>]]></check>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153691654</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153691738</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153692561</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">WM</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153693973</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">WM</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153694054</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">WM</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <recognizeAsPlainText>true</recognizeAsPlainText>
+              <file>C:/APIData/N600_FT_API_Data_Sheet.xls</file>
+              <worksheet>Method1</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>false</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
             </con:configuration>
           </con:dataSource>
           <con:shared>false</con:shared>
           <con:restartShared>false</con:restartShared>
-          <con:property>IV-USER</con:property>
-          <con:property>CHANNEL</con:property>
+          <con:property>Step_Name</con:property>
+          <con:property>IV-User</con:property>
+          <con:property>Channel</con:property>
+          <con:property>XML_Response</con:property>
           <con:startRow>0</con:startRow>
           <con:endRow>5</con:endRow>
           <con:recordsPerIteration>1</con:recordsPerIteration>
@@ -6878,7 +7031,7 @@ testRunner.testCase.testSuite.setPropertyValue("endtDate", NewNextDate)</script>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Accounts</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" id="45a71cd3-48ec-49bd-85e8-9b6bad65e764" name="Invalid HTTP Status Codes">
@@ -6907,8 +7060,8 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters>
-              <con:entry key="iv-user" value="${DataSource#IV-USER}"/>
-              <con:entry key="channel" value="${DataSource#CHANNEL}"/>
+              <con:entry key="iv-user" value="${DataSource#IV-User}"/>
+              <con:entry key="channel" value="${DataSource#Channel}"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -6927,11 +7080,32 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
           </con:restRequest>
         </con:config>
       </con:testStep>
+      <con:testStep type="datasink" name="DataSink" id="54e7c5d4-3c48-49c4-87fa-22113b647a19">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file>C:/APIData/N600_FT_API_Data_Sheet.xls</file>
+              <outfile>C:/APIData/N600_FT_API_Data_Sheet.xls</outfile>
+              <worksheet>Method1</worksheet>
+              <cell>D2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>false</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>XML_Response</con:name>
+              <con:value>${01.01 ClientAccountsGet#ResponseAsXml}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
       <con:testStep type="datasourceloop" name="DataSource Loop" id="b7060f18-8cf0-4e44-a135-268e518eed18">
         <con:settings/>
         <con:config>
           <dataSourceStep>DataSource</dataSourceStep>
-          <targetStep>AccountsGet</targetStep>
+          <targetStep>01.01 ClientAccountsGet</targetStep>
           <discardResults>true</discardResults>
         </con:config>
       </con:testStep>
@@ -6939,6 +7113,11 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
       <con:reportParameters/>
       <con:breakPoints>
         <con:testStepId>6b4e89f1-a1b7-4477-8e21-e4598c193f91</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>54e7c5d4-3c48-49c4-87fa-22113b647a19</con:testStepId>
         <con:status>NONE</con:status>
         <con:properties/>
       </con:breakPoints>
@@ -6964,30 +7143,24 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
         <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           <con:dataSource type="Grid">
             <con:configuration>
-              <check><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">true</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">false</con:entry></xml-fragment>]]></check>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">3E7912E7157E78343940927E850684E5B538CED188361C1A877502334F384EC2</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">71F53010865D957A8B924E791750A33FEB6C5CFE552AE35EF45857AEA09E585C</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">DFDCF82769E36FABDCFD981B2D33B3FFDCCD77074FBAE49FA6C865F01B30A4FD</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">7126475D84269C530F1441BC593631891F0782E539CCE06B34FC40BC51C13011</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config">1A81FF9E8DC3E3CA3E26C129C2F1AC5E7EAA2A493D0DB469C2E857C8E51CC41A</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">transfer</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">4519003153690821</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config">DS</con:entry><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <row><![CDATA[<xml-fragment><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/><con:entry xmlns:con="http://eviware.com/soapui/config"/></xml-fragment>]]></row>
-              <recognizeAsPlainText>true</recognizeAsPlainText>
+              <file>C:/APIData/N600_FT_API_Data_Sheet.xls</file>
+              <worksheet>Method2</worksheet>
+              <cell>A1</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
             </con:configuration>
           </con:dataSource>
           <con:shared>false</con:shared>
           <con:restartShared>false</con:restartShared>
-          <con:property>TOKEN</con:property>
-          <con:property>TYPE</con:property>
-          <con:property>IV-USER</con:property>
-          <con:property>CHANNEL</con:property>
+          <con:property>Step_Name</con:property>
+          <con:property>iv-user</con:property>
+          <con:property>channel</con:property>
+          <con:property>token</con:property>
+          <con:property>type</con:property>
+          <con:property>excludeOrderID</con:property>
+          <con:property>XML_Response</con:property>
           <con:startRow>0</con:startRow>
-          <con:endRow>5</con:endRow>
+          <con:endRow>9</con:endRow>
           <con:recordsPerIteration>1</con:recordsPerIteration>
           <con:completeLastOperation>true</con:completeLastOperation>
           <con:trimValues>false</con:trimValues>
@@ -7004,7 +7177,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Accounts/44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB/availableFunds/transfer</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" id="72e75738-bfeb-401d-a970-a74d6b264d90" name="Invalid HTTP Status Codes">
@@ -7058,10 +7231,10 @@ assert (timestamp != null) && (timestamp != "") && (AccNo != null) && (AccNo != 
             </con:credentials>
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters>
-              <con:entry key="iv-user" value="${DataSource#IV-USER}"/>
-              <con:entry key="channel" value="${DataSource#CHANNEL}"/>
-              <con:entry key="type" value="${DataSource#TYPE}"/>
-              <con:entry key="token" value="${DataSource#TOKEN}"/>
+              <con:entry key="iv-user" value="${DataSource#iv-user}"/>
+              <con:entry key="channel" value="${DataSource#channel}"/>
+              <con:entry key="type" value="${DataSource#type}"/>
+              <con:entry key="token" value="${DataSource#token}"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -7078,6 +7251,22 @@ assert (timestamp != null) && (timestamp != "") && (AccNo != null) && (AccNo != 
               </con:entry>
             </con:environmentSpec>
           </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="DataSink" id="33b93254-5592-4090-a1be-445c16143227">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file>C:/APIData/N600_FT_API_Data_Sheet.xls</file>
+              <outfile>C:/APIData/N600_FT_API_Data_Sheet.xls</outfile>
+              <worksheet>Method2</worksheet>
+              <cell>G2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>false</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties/>
         </con:config>
       </con:testStep>
       <con:testStep type="datasourceloop" name="DataSource Loop" id="6bb457cf-85a3-4b0a-af33-509c6be9690c">
@@ -7105,6 +7294,11 @@ assert (timestamp != null) && (timestamp != "") && (AccNo != null) && (AccNo != 
         <con:status>NONE</con:status>
         <con:properties/>
       </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>33b93254-5592-4090-a1be-445c16143227</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
       <con:environmentSpec>
         <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
           <con:authProfile>Inherit From Parent</con:authProfile>
@@ -7117,7 +7311,7 @@ assert (timestamp != null) && (timestamp != "") && (AccNo != null) && (AccNo != 
         </con:entry>
       </con:environmentSpec>
     </con:testCase>
-    <con:testCase id="5a90c351-247b-45a2-99dc-eec519769465" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="03 ClientFundTransferPost" searchProperties="true" timeout="0">
+    <con:testCase id="5a90c351-247b-45a2-99dc-eec519769465" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="03 ClientFundTransferPost" searchProperties="true" timeout="0" disabled="true">
       <con:settings>
         <con:setting id="5a90c351-247b-45a2-99dc-eec519769465fileName">03-ClientFundTransferPost</con:setting>
       </con:settings>
@@ -7606,7 +7800,7 @@ assert (timestamp != null) && (timestamp != "") && (AccNo != null) && (AccNo != 
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request>{\r
    "fromAccountToken" : "${DataSource#FROMTOKEN}",\r
    "toAccountToken" : "${DataSource#TOTOKEN}",\r
@@ -7773,7 +7967,7 @@ assert (orderDate != null) && (orderDate != "") && (referenceId != null) && (ref
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/FundTransfer/history</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" id="d0872d75-741a-48dc-971f-dad33f5d4c80" name="Invalid HTTP Status Codes">
@@ -7895,16 +8089,16 @@ assert (orderDate != null) && (orderDate != "") && (transferType != null) && (tr
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request>{\r
    "fromAccountToken" : "7126475D84269C530F1441BC593631891F0782E539CCE06B34FC40BC51C13011",\r
    "toAccountToken" : "90B06084241E4FCF718E8AD01D2BC47E3270EAA17D0FF53364D196F34DEEC32E",\r
    "amount" : "50",\r
    "frequency" : "Weekly",\r
    "rspType" : "Regular",\r
-   "startDate" : "${#TestSuite#startDate}",\r
+   "startDate" : "${#Project#startDate}",\r
    "endDate" : "",\r
-   "numberOfTimes" : null
+   "numberOfTimes" : null\r
 }</con:request>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" id="fa1a7acb-7d3c-477d-abd5-1f6a3b0e9b2e" name="Invalid HTTP Status Codes">
@@ -8015,14 +8209,14 @@ testRunner.runTestStep( project.testSuites['Automation_Testing'].testCases['08 C
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request>{\r
    "fromAccountToken" : "7126475D84269C530F1441BC593631891F0782E539CCE06B34FC40BC51C13011",\r
    "toAccountToken" : "90B06084241E4FCF718E8AD01D2BC47E3270EAA17D0FF53364D196F34DEEC32E",\r
    "amount" : "50",\r
    "frequency" : "Monthly",\r
    "rspType" : "Regular",\r
-   "startDate" : "${#TestSuite#startDate}",
+   "startDate" : "${#Project#startDate}",\r
    "endDate" : "",\r
    "numberOfTimes" : "10"\r
 }</con:request>
@@ -8135,15 +8329,15 @@ testRunner.runTestStep( project.testSuites['Automation_Testing'].testCases['08 C
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request>{\r
    "fromAccountToken" : "7126475D84269C530F1441BC593631891F0782E539CCE06B34FC40BC51C13011",\r
    "toAccountToken" : "90B06084241E4FCF718E8AD01D2BC47E3270EAA17D0FF53364D196F34DEEC32E",\r
    "amount" : "50",\r
    "frequency" : "BiWeekly",\r
    "rspType" : "Regular",\r
-   "startDate" : "${#TestSuite#startDate}",\r
-   "endDate" : "${#TestSuite#endtDate}",\r
+   "startDate" : "${#Project#startDate}",\r
+   "endDate" : "${#Project#endtDate}",\r
    "numberOfTimes" : null\r
 }</con:request>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized</con:originalUri>
@@ -8328,7 +8522,7 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" id="a42f7142-fd75-4d1d-8f56-ba9bc9e1324f" name="Invalid HTTP Status Codes">
@@ -8464,15 +8658,15 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request>{\r
    "fromAccountToken" : "7126475D84269C530F1441BC593631891F0782E539CCE06B34FC40BC51C13011",\r
    "toAccountToken" : "90B06084241E4FCF718E8AD01D2BC47E3270EAA17D0FF53364D196F34DEEC32E",\r
    "amount" : 25,\r
    "frequency" : "BiWeekly",\r
    "rspType" : "Regular",\r
-   "startDate" : "${#TestSuite#startDate}",\r
-   "endDate" : "${#TestSuite#endtDate}",\r
+   "startDate" : "${#Project#startDate}",\r
+   "endDate" : "${#Project#endtDate}",\r
    "numberOfTimes" : null\r
 }</con:request>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized/</con:originalUri>
@@ -8598,7 +8792,7 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized/</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" id="0714f33e-5e4d-4027-885d-88474d45bfe0" name="Invalid HTTP Status Codes">
@@ -8749,7 +8943,7 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/admin/client/Accounts</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes" id="fd744998-97fb-49a5-a471-cd1d4763c688">
@@ -8866,7 +9060,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/admin/client/4519003153690821/FundTransfer/history</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes" id="f10bf023-653b-4972-9456-a24bc208d2c3">
@@ -8995,15 +9189,15 @@ assert (orderDate != null) && (orderDate != "") && (transferType != null) && (tr
             <con:settings>
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request>{\r
    "fromAccountToken" : "44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB",\r
    "toAccountToken" : "8897ABFD46853763BE5099F6C2C4B30D852EA7B244D36035B9F2A0E92C5165D1",\r
    "amount" : 50,\r
    "frequency" : "Monthly",\r
    "rspType" : "Regular",\r
-   "startDate" : "${#TestSuite#startDate}",\r
-   "endDate" : "${#TestSuite#endtDate}",\r
+   "startDate" : "${#Project#startDate}",\r
+   "endDate" : "${#Project#endtDate}",\r
    "numberOfTimes" : null\r
 }</con:request>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized</con:originalUri>
@@ -9161,7 +9355,7 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/admin/client/4519003153690821/Preauthorized</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes" id="6f4b192c-3328-441b-9011-631cbd857d4d">
@@ -9299,16 +9493,16 @@ testRunner.testCase.testSuite.setPropertyValue("PACID-2", pacInstructionId)</scr
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
-            <con:request>{
-   "fromAccountToken" : "44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB",
-   "toAccountToken" : "8897ABFD46853763BE5099F6C2C4B30D852EA7B244D36035B9F2A0E92C5165D1",
-   "amount" : 25,
-   "frequency" : "Weekly",
-   "rspType" : "Regular",
-   "startDate" : "${#TestSuite#startDate}",
-   "endDate" : "${#TestSuite#endtDate}",
-   "numberOfTimes" : null
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
+            <con:request>{\r
+   "fromAccountToken" : "44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB",\r
+   "toAccountToken" : "8897ABFD46853763BE5099F6C2C4B30D852EA7B244D36035B9F2A0E92C5165D1",\r
+   "amount" : 25,\r
+   "frequency" : "Weekly",\r
+   "rspType" : "Regular",\r
+   "startDate" : "${#Project#startDate}",\r
+   "endDate" : "${#Project#endtDate}",\r
+   "numberOfTimes" : null\r
 }</con:request>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes" id="265f3eee-65e3-4d15-b144-d4b07f077618">
@@ -9430,7 +9624,7 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
               <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
             </con:settings>
             <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com</con:endpoint>
+            <con:endpoint>${#Project#Endpoint}</con:endpoint>
             <con:request/>
             <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/</con:originalUri>
             <con:assertion type="Invalid HTTP Status Codes" name="Invalid HTTP Status Codes" id="141c0c4b-710e-4a9d-84a6-0f2a09555df5">
@@ -9725,7 +9919,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
             <con:parameters>
               <con:entry key="iv-user" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="824"/>
+              <con:entry key="id" value="10776"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
