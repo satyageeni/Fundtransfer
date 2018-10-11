@@ -27,11 +27,11 @@
     </con:property>
     <con:property>
       <con:name>startDate</con:name>
-      <con:value>2018-10-10T13:28:21-07:00</con:value>
+      <con:value>2018-10-11T12:06:42-07:00</con:value>
     </con:property>
     <con:property>
       <con:name>endtDate</con:name>
-      <con:value>2019-10-10T13:28:21-07:00</con:value>
+      <con:value>2019-10-11T12:06:42-07:00</con:value>
     </con:property>
   </con:properties>
   <con:wssContainer/>
@@ -5726,11 +5726,11 @@ testRunner.testCase.testSuite.project.setPropertyValue("endtDate", NewNextDate)<
       </con:property>
       <con:property>
         <con:name>PACID-1</con:name>
-        <con:value>10899</con:value>
+        <con:value>10913</con:value>
       </con:property>
       <con:property>
         <con:name>PACID-2</con:name>
-        <con:value>10900</con:value>
+        <con:value>10908</con:value>
       </con:property>
     </con:properties>
     <con:reportParameters/>
@@ -7734,173 +7734,6 @@ assert (orderDate != null) && (orderDate != "") && (transferType != null) && (tr
         </con:entry>
       </con:environmentSpec>
     </con:testCase>
-    <con:testCase id="b7f691ac-a8d0-455a-af2b-313610e0b584" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Copy of 05 ClientPreauthorizedPost" searchProperties="true" timeout="0">
-      <con:settings>
-        <con:setting id="00fb5795-2ef6-42f1-aea5-9801a58c7999fileName">05-ClientPreauthorizedPost</con:setting>
-      </con:settings>
-      <con:savedRecentRuns>1</con:savedRecentRuns>
-      <con:testStep type="restrequest" name="05.01 ClientFundTransferPost Start and End Date" id="5c0d4ac4-3390-4bee-98f0-8a6c39945fde">
-        <con:settings/>
-        <con:config service="Fund Transfer V1-20180716" resourcePath="/v1/client/Preauthorized" methodName="V1ClientPreauthorizedPost" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:restRequest name="05.01 ClientFundTransferPost Start and End Date" id="af8011fe-8a71-4f58-94d0-c4342904362c" mediaType="application/json" postQueryString="false">
-            <con:settings>
-              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
-            </con:settings>
-            <con:endpoint>${#Project#Endpoint}</con:endpoint>
-            <con:request>{\r
-   "fromAccountToken" : "44D95447E6C83F9F4EF73F588E4595C50351235B14A22109E88AEB03B4BB68FB",\r
-   "toAccountToken" : "8897ABFD46853763BE5099F6C2C4B30D852EA7B244D36035B9F2A0E92C5165D1",\r
-   "amount" : 50,\r
-   "frequency" : "Monthly",\r
-   "rspType" : "Regular",\r
-   "startDate" : "${#Project#startDate}",\r
-   "endDate" : "${#Project#endtDate}",\r
-   "numberOfTimes" : null\r
-}</con:request>
-            <con:originalUri>https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized</con:originalUri>
-            <con:assertion type="Invalid HTTP Status Codes" id="fa1a7acb-7d3c-477d-abd5-1f6a3b0e9b2e" name="Invalid HTTP Status Codes">
-              <con:configuration>
-                <codes>500,204</codes>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="Valid HTTP Status Codes" id="bbc424b8-f40c-492f-88c4-d7ca4fde0db8" name="Valid HTTP Status Codes">
-              <con:settings/>
-              <con:configuration>
-                <codes>200</codes>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="GroovyScriptAssertion" id="813507bc-ca4e-42eb-b3fa-79cf6340e0d6" name="Check for API Response is not Null">
-              <con:configuration>
-                <scriptText>def response = messageExchange.getResponseContent()
-assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []):"Assertion failed, Got Null Response"</scriptText>
-              </con:configuration>
-            </con:assertion>
-            <con:assertion type="GroovyScriptAssertion" id="425702c1-cd21-45c9-b5ab-723893b0326b" name="Script Assertion to check value not null">
-              <con:configuration>
-                <scriptText><![CDATA[//declare namespace ns1='https://fundtransfer-poc-unprognosticated-statohm.apps.pcf.devfg.rbc.com/v1/client/Preauthorized';
-//ns1:Response[1]/ns1:confirmationNumber[1]
-
-
-testStepName = messageExchange.modelItem.testStep.name   //to get the Test Step Name
-xmlHold = messageExchange.responseContentAsXml.toString()  //to store the response as Xml string
-def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context )
-def holder = groovyUtils.getXmlHolder (xmlHold)
-//log.info holder.getXml()  // will display /Log the response in Xml
-
-confirmationNumber = holder.getNodeValue("//ns1:Response[1]/ns1:confirmationNumber[1]")
-fromAccountNumber = holder.getNodeValue("//ns1:Response[1]/ns1:fromAccountNumber[1]")
-fromAccountCurrency = holder.getNodeValue("//ns1:Response[1]/ns1:fromAccountCurrency[1]")
-toAccountNumber = holder.getNodeValue("//ns1:Response[1]/ns1:toAccountNumber[1]")
-toAccountCurrency = holder.getNodeValue("//ns1:Response[1]/ns1:toAccountCurrency[1]")
-toAccountProdCat = holder.getNodeValue("//ns1:Response[1]/ns1:toAccountProdCat[1]")
-toAccountType = holder.getNodeValue("//ns1:Response[1]/ns1:toAccountType[1]")
-toAccountSubPurpose = holder.getNodeValue("//ns1:Response[1]/ns1:toAccountSubPurpose[1]")
-fromAccountToken = holder.getNodeValue("//ns1:Response[1]/ns1:fromAccountToken[1]")
-toAccountToken = holder.getNodeValue("//ns1:Response[1]/ns1:toAccountToken[1]")
-amount = holder.getNodeValue("//ns1:Response[1]/ns1:amount[1]")
-frequency = holder.getNodeValue("//ns1:Response[1]/ns1:frequency[1]")
-rspType = holder.getNodeValue("//ns1:Response[1]/ns1:rspType[1]")
-startDate = holder.getNodeValue("//ns1:Response[1]/ns1:startDate[1]")
-endDate = holder.getNodeValue("//ns1:Response[1]/ns1:endDate[1]")
-
-log.info confirmationNumber
-log.info fromAccountNumber
-log.info fromAccountCurrency
-log.info toAccountNumber
-log.info toAccountCurrency
-log.info toAccountProdCat
-log.info toAccountType
-log.info toAccountSubPurpose
-log.info fromAccountToken
-log.info toAccountToken
-log.info amount
-log.info frequency
-log.info rspType
-log.info startDate
-log.info endDate
-
-assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccountNumber != null) && (fromAccountNumber != "") && (fromAccountCurrency != null) && (fromAccountCurrency != "") && (toAccountNumber != null) && (toAccountNumber != "") && (toAccountCurrency != null) && (toAccountCurrency != "") && (toAccountProdCat != null) && (toAccountProdCat != "") && (toAccountType != null) && (toAccountType != "") && (toAccountSubPurpose != null) && (toAccountSubPurpose != "") && (fromAccountToken != null) && (fromAccountToken != "") && (toAccountToken != null) && (toAccountToken != "") && (amount != null) && (amount != "") && (frequency != "") && (frequency != null) && (rspType != "") && (rspType != null)&& (startDate != "") && (startDate != null)&& (endDate != "") && (endDate != null):"Assertion failed, Got Null Response"]]></scriptText>
-              </con:configuration>
-            </con:assertion>
-            <con:credentials>
-              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
-              <con:authType>No Authorization</con:authType>
-            </con:credentials>
-            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:parameters>
-              <con:entry key="iv-user" value="4519003153690821"/>
-              <con:entry key="channel" value="DS"/>
-            </con:parameters>
-            <con:parameterOrder>
-              <con:entry>iv-user</con:entry>
-              <con:entry>channel</con:entry>
-            </con:parameterOrder>
-            <con:environmentSpec>
-              <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
-                <con:authProfile>Inherit From Parent</con:authProfile>
-              </con:entry>
-              <con:entry environmentId="afe0568a-7926-456e-b23c-e682353b607a">
-                <con:authProfile>Inherit From Parent</con:authProfile>
-              </con:entry>
-              <con:entry environmentId="7127127b-2a04-4502-bd04-107c64c31d99">
-                <con:authProfile>Inherit From Parent</con:authProfile>
-              </con:entry>
-              <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
-                <con:authProfile>Inherit From Parent</con:authProfile>
-              </con:entry>
-            </con:environmentSpec>
-          </con:restRequest>
-        </con:config>
-      </con:testStep>
-      <con:properties/>
-      <con:reportParameters/>
-      <con:breakPoints>
-        <con:testStepId>d6396c9f-ddeb-4ec7-ad20-e49386d61575</con:testStepId>
-        <con:status>NONE</con:status>
-        <con:properties/>
-      </con:breakPoints>
-      <con:breakPoints>
-        <con:testStepId>f2cd723f-9b31-407e-be84-90ed07e22823</con:testStepId>
-        <con:status>NONE</con:status>
-        <con:properties/>
-      </con:breakPoints>
-      <con:breakPoints>
-        <con:testStepId>ff17cbd2-2add-4520-ae79-f18c97b586ab</con:testStepId>
-        <con:status>NONE</con:status>
-        <con:properties/>
-      </con:breakPoints>
-      <con:breakPoints>
-        <con:testStepId>77ab4986-a81c-40a3-b34f-3d3ad79d0f6a</con:testStepId>
-        <con:status>NONE</con:status>
-        <con:properties/>
-      </con:breakPoints>
-      <con:breakPoints>
-        <con:testStepId>ea796165-2bcf-43a8-bfc5-7aa2a09f8dd1</con:testStepId>
-        <con:status>NONE</con:status>
-        <con:properties/>
-      </con:breakPoints>
-      <con:breakPoints>
-        <con:testStepId>14e51bda-8ca2-4ed6-a497-47eba3e550e4</con:testStepId>
-        <con:status>NONE</con:status>
-        <con:properties/>
-      </con:breakPoints>
-      <con:breakPoints>
-        <con:testStepId>beee0293-7469-4048-9e5a-f14d9cc1e2dd</con:testStepId>
-        <con:status>NONE</con:status>
-        <con:properties/>
-      </con:breakPoints>
-      <con:environmentSpec>
-        <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
-          <con:authProfile>Inherit From Parent</con:authProfile>
-        </con:entry>
-        <con:entry environmentId="7127127b-2a04-4502-bd04-107c64c31d99">
-          <con:authProfile>Inherit From Parent</con:authProfile>
-        </con:entry>
-        <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
-          <con:authProfile>Inherit From Parent</con:authProfile>
-        </con:entry>
-      </con:environmentSpec>
-    </con:testCase>
     <con:testCase id="0f1f2e52-70b7-49e0-9a64-b732998af090" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="11 AdminClientBySurrogateIdPreauthorizedGet" searchProperties="true" timeout="0">
       <con:settings/>
       <con:savedRecentRuns>1</con:savedRecentRuns>
@@ -8011,7 +7844,7 @@ log.info rspType
 log.info startDate
 log.info endDate
 
-assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNumber != null) && (confirmationNumber != "") && (fromAccountNumber != null) && (fromAccountNumber != "") && (fromAccountCurrency != null) && (fromAccountCurrency != "") && (toAccountNumber != null) && (toAccountNumber != "") && (toAccountCurrency != null) && (toAccountCurrency != "") && (toAccountProdCat != null) && (toAccountProdCat != "") && (receivedDate != null) && (receivedDate != "") && (toAccountType != null) && (toAccountType != "") && (toAccountSubPurpose != null) && (toAccountSubPurpose != "") && (fromAccountToken != null) && (fromAccountToken != "") && (toAccountToken != null) && (toAccountToken != "") && (amount != null) && (amount != "") && (frequency != "") && (frequency != null) && (rspType != "") && (rspType != null)&& (startDate != "") && (startDate != null)&& (endDate != "") && (endDate != null):"Assertion failed, Got Null Response"]]></scriptText>
+assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNumber != null) && (confirmationNumber != "") && (fromAccountNumber != null) && (fromAccountNumber != "") && (fromAccountCurrency != null) && (fromAccountCurrency != "") && (toAccountNumber != null) && (toAccountNumber != "") && (toAccountCurrency != null) && (toAccountCurrency != "") && (toAccountProdCat != null) && (toAccountProdCat != "") && (receivedDate != null) && (receivedDate != "") && (toAccountType != null) && (toAccountType != "") && (toAccountSubPurpose != null) && (toAccountSubPurpose != "") && (fromAccountToken != null) && (fromAccountToken != "") && (toAccountToken != null) && (toAccountToken != "") && (amount != null) && (amount != "") && (frequency != "") && (frequency != null) && (rspType != "") && (rspType != null)&& (startDate != "") && (startDate != null):"Assertion failed, Got Null Response"]]></scriptText>
               </con:configuration>
             </con:assertion>
             <con:credentials>
@@ -9891,7 +9724,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
             <con:parameters>
               <con:entry key="iv-user" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="10881"/>
+              <con:entry key="id" value="10902"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
