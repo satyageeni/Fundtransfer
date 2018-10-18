@@ -27,11 +27,11 @@
     </con:property>
     <con:property>
       <con:name>startDate</con:name>
-      <con:value>2018-10-11T12:06:42-07:00</con:value>
+      <con:value>2018-10-18T16:20:06-07:00</con:value>
     </con:property>
     <con:property>
       <con:name>endtDate</con:name>
-      <con:value>2019-10-11T12:06:42-07:00</con:value>
+      <con:value>2019-10-18T16:20:06-07:00</con:value>
     </con:property>
   </con:properties>
   <con:wssContainer/>
@@ -76,10 +76,13 @@
   </con:eventHandlers>
   <con:environment id="7127127b-2a04-4502-bd04-107c64c31d99" name="SITF4">
     <con:service type="REST" name="Fund Transfer V1-20180716">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization">${#Project#Endpoint}</con:endpoint>
     </con:service>
     <con:service type="REST" name="Fund Transfer V1-20180917">
-      <con:endpoint authProfile="No Authorization"/>
+      <con:endpoint authProfile="No Authorization">${#Project#Endpoint}</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="REST Service 1">
+      <con:endpoint authProfile="Inherit From Parent"/>
     </con:service>
     <con:property>
       <con:name>Endpoint</con:name>
@@ -295,6 +298,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -498,6 +504,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -669,6 +678,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -885,6 +897,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 2" id="3575d63d-82be-4576-9cea-3547d6e0902b" mediaType="application/json" postQueryString="false">
@@ -929,6 +944,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 3" id="7e484dc8-3922-464c-a713-859acfcceda2" mediaType="text/json" postQueryString="false">
@@ -964,6 +982,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 4" id="02abd77b-72d9-4bc1-8657-c6c1e94b887d" mediaType="application/*+json" postQueryString="false">
@@ -998,6 +1019,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -1186,6 +1210,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -1380,6 +1407,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -1555,6 +1585,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -1724,6 +1757,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -1945,6 +1981,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 2" id="0f1223ea-8724-4cac-97af-c054c07c923a" mediaType="application/json">
@@ -1986,6 +2025,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 3" id="26cf12b9-c7f6-4610-8269-c700068bf1ed" mediaType="text/json">
@@ -2017,6 +2059,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 4" id="37bd2a0d-08e4-41ee-aa85-6b30c8bb597f" mediaType="application/*+json">
@@ -2047,6 +2092,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -2211,6 +2259,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -2436,6 +2487,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -2614,6 +2668,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -2837,6 +2894,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -3036,6 +3096,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -3220,6 +3283,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -3378,6 +3444,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -3585,6 +3654,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 2" id="c6e22231-4d7c-4098-88de-5f6fa93f6745" mediaType="application/json">
@@ -3624,6 +3696,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 3" id="adaa4281-61a5-47a5-aa59-05079f86077c" mediaType="text/json">
@@ -3654,6 +3729,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 4" id="4a3a7e1c-ecfb-453c-a20c-d85185d238bb" mediaType="application/*+json">
@@ -3683,6 +3761,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -3862,6 +3943,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -4039,6 +4123,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -4207,6 +4294,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -4369,6 +4459,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -4583,6 +4676,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 2" id="ef8fd21d-f802-42ec-bee6-1fe6de4869ce" mediaType="application/json">
@@ -4621,6 +4717,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 3" id="97723266-13c1-4bc9-b159-e4b027fbaaec" mediaType="text/json">
@@ -4649,6 +4748,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 4" id="63007478-d919-4106-86ed-13d3a7a6d4c4" mediaType="application/*+json">
@@ -4676,6 +4778,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -4830,6 +4935,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -5036,6 +5144,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 2" id="d7084066-a7ad-48f2-a791-fbe445f80682" mediaType="application/json">
@@ -5074,6 +5185,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 3" id="01ad5741-8489-4209-9107-33fddf284d14" mediaType="text/json">
@@ -5103,6 +5217,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 4" id="f5659cb5-994f-40c2-a726-3c1f1169d296" mediaType="application/*+json">
@@ -5131,6 +5248,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -5303,6 +5423,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -5508,6 +5631,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 2" id="11a5415d-a36e-411e-bf2f-ea0dfd21c2e6" mediaType="application/json">
@@ -5545,6 +5671,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:request name="Request 3" id="13d81bc2-07b5-4bde-9cf3-a7699cd51e84" mediaType="text/json">
@@ -5572,6 +5701,9 @@
             </con:entry>
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
+            </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
             </con:entry>
           </con:environmentSpec>
         </con:request>
@@ -5601,6 +5733,9 @@
             <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
               <con:authProfile>Inherit From Parent</con:authProfile>
             </con:entry>
+            <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+              <con:authProfile>No Authorization</con:authProfile>
+            </con:entry>
           </con:environmentSpec>
         </con:request>
         <con:environmentSpec>
@@ -5626,6 +5761,78 @@
           <con:authProfile>Inherit From Parent</con:authProfile>
         </con:entry>
       </con:environmentSpec>
+    </con:resource>
+  </con:interface>
+  <con:interface xsi:type="con:RestService" id="db5823fd-d983-442c-a4a1-74ab6c7144d5" wadlVersion="http://wadl.dev.java.net/2009/02" name="REST Service 1" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints/>
+    <con:resource name="/UJ40/IdAttrRestAPI/v1/inq" path="/UJ40/IdAttrRestAPI/v1/inq" id="55078d6d-324b-436d-bc4a-129454ec6ee2">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter required="true">
+          <con:name>Authorization</con:name>
+          <con:value/>
+          <con:style>QUERY</con:style>
+          <con:default/>
+          <con:description xsi:nil="true"/>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="POST" id="50a10213-d0b8-4973-9a8d-031520352ea8" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html</con:mediaType>
+          <con:status>400</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:request name="POST Request" id="143473dc-f9cc-4348-adbb-4d9b8faa0cb0" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://qa-apigw-int.saifg.rbc.com</con:endpoint>
+          <con:request>{
+    "idAttrInqRqHdr": {
+      "rqUID": "5fed904a-8513-40be-b0f8-74bbe16032bd",
+      "clientAppName": "N600"
+    },
+    "incIdType": [
+      "com.investcloud"
+    ],
+    "idSet": [
+               {
+               "id": [
+        {
+          "idType": "com.rbc.fg.cis",
+          "idValue": "4519003153690821"
+        }
+               ]
+               }
+    ]
+  }</con:request>
+          <con:originalUri>https://qa-apigw-int.saifg.rbc.com/UJ40/IdAttrRestAPI/v1/inq</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters>
+            <entry key="Authorization" value="RBC rbc_app_id=OuJnu8ERCMvFoUGrPmujtpmki7v9dbl4" xmlns="http://eviware.com/soapui/config"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>Authorization</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
     </con:resource>
   </con:interface>
   <con:testSuite id="fd1f1e03-0e84-4259-80f8-6b28de99166d" name="GroovyScriptSuite">
@@ -5726,11 +5933,11 @@ testRunner.testCase.testSuite.project.setPropertyValue("endtDate", NewNextDate)<
       </con:property>
       <con:property>
         <con:name>PACID-1</con:name>
-        <con:value>10913</con:value>
+        <con:value>10946</con:value>
       </con:property>
       <con:property>
         <con:name>PACID-2</con:name>
-        <con:value>10908</con:value>
+        <con:value>10947</con:value>
       </con:property>
     </con:properties>
     <con:reportParameters/>
@@ -5883,6 +6090,9 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -6056,6 +6266,9 @@ assert (timestamp != null) && (timestamp != "") && (AccNo != null) && (AccNo != 
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -6266,6 +6479,9 @@ assert (orderDate != null) && (orderDate != "") && (referenceId != null) && (ref
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -6441,6 +6657,9 @@ assert (orderDate != null) && (orderDate != "") && (transferType != null) && (tr
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -6676,6 +6895,9 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -6925,6 +7147,9 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -7182,6 +7407,9 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -7352,6 +7580,9 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -7423,6 +7654,7 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
           <con:shared>false</con:shared>
           <con:restartShared>false</con:restartShared>
           <con:property>Step_Name</con:property>
+          <con:property>Client_Card</con:property>
           <con:property>SURROGATE_ID</con:property>
           <con:property>IV-USER</con:property>
           <con:property>Channel</con:property>
@@ -7491,6 +7723,9 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -7503,7 +7738,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <file>C:/APIData/N600_FT_API_Data_Sheet.xls</file>
               <outfile>C:/APIData/N600_FT_API_Data_Sheet.xls</outfile>
               <worksheet>Method9</worksheet>
-              <cell>E2</cell>
+              <cell>F2</cell>
               <evaluateFormulas>false</evaluateFormulas>
               <append>false</append>
             </con:configuration>
@@ -7566,6 +7801,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
           <con:shared>false</con:shared>
           <con:restartShared>false</con:restartShared>
           <con:property>Step_Name</con:property>
+          <con:property>Client_Card</con:property>
           <con:property>SURROGATE_ID</con:property>
           <con:property>Account_Token</con:property>
           <con:property>Start_Date</con:property>
@@ -7677,6 +7913,9 @@ assert (orderDate != null) && (orderDate != "") && (transferType != null) && (tr
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -7689,7 +7928,7 @@ assert (orderDate != null) && (orderDate != "") && (transferType != null) && (tr
               <file>C:/APIData/N600_FT_API_Data_Sheet.xls</file>
               <outfile>C:/APIData/N600_FT_API_Data_Sheet.xls</outfile>
               <worksheet>Method10</worksheet>
-              <cell>H2</cell>
+              <cell>I2</cell>
               <evaluateFormulas>false</evaluateFormulas>
               <append>false</append>
             </con:configuration>
@@ -7752,6 +7991,7 @@ assert (orderDate != null) && (orderDate != "") && (transferType != null) && (tr
           <con:shared>false</con:shared>
           <con:restartShared>false</con:restartShared>
           <con:property>Step_Name</con:property>
+          <con:property>Client_Card</con:property>
           <con:property>SURROGATE_ID</con:property>
           <con:property>IV-USER</con:property>
           <con:property>Channel</con:property>
@@ -7870,6 +8110,9 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -7896,7 +8139,7 @@ testRunner.testCase.testSuite.setPropertyValue("PACID-2", pacInstructionId)</scr
               <file>C:/APIData/N600_FT_API_Data_Sheet.xls</file>
               <outfile>C:/APIData/N600_FT_API_Data_Sheet.xls</outfile>
               <worksheet>Method11</worksheet>
-              <cell>E2</cell>
+              <cell>F2</cell>
               <evaluateFormulas>false</evaluateFormulas>
               <append>false</append>
             </con:configuration>
@@ -7958,6 +8201,7 @@ testRunner.testCase.testSuite.setPropertyValue("PACID-2", pacInstructionId)</scr
           <con:shared>false</con:shared>
           <con:restartShared>false</con:restartShared>
           <con:property>Step_Name</con:property>
+          <con:property>Client_Card</con:property>
           <con:property>SURROGATE_ID</con:property>
           <con:property>IV-USER</con:property>
           <con:property>Channel</con:property>
@@ -8091,6 +8335,9 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -8103,7 +8350,7 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
               <file>C:/APIData/N600_FT_API_Data_Sheet.xls</file>
               <outfile>C:/APIData/N600_FT_API_Data_Sheet.xls</outfile>
               <worksheet>Method12</worksheet>
-              <cell>K2</cell>
+              <cell>L2</cell>
               <evaluateFormulas>false</evaluateFormulas>
               <append>false</append>
             </con:configuration>
@@ -8173,6 +8420,7 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
           <con:shared>false</con:shared>
           <con:restartShared>false</con:restartShared>
           <con:property>Step_Name</con:property>
+          <con:property>Client_Card</con:property>
           <con:property>SURROGATE_ID</con:property>
           <con:property>IV-USER</con:property>
           <con:property>Channel</con:property>
@@ -8295,6 +8543,9 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -8307,7 +8558,7 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
               <file>C:/APIData/N600_FT_API_Data_Sheet.xls</file>
               <outfile>C:/APIData/N600_FT_API_Data_Sheet.xls</outfile>
               <worksheet>Method13</worksheet>
-              <cell>E2</cell>
+              <cell>F2</cell>
               <evaluateFormulas>false</evaluateFormulas>
               <append>false</append>
             </con:configuration>
@@ -8514,6 +8765,9 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -8577,6 +8831,9 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -8664,6 +8921,9 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -8716,6 +8976,9 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -8782,6 +9045,9 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -8854,6 +9120,9 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -8930,7 +9199,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
             <con:parameters>
               <con:entry key="iv-user" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="10882"/>
+              <con:entry key="id" value="10959"/>
             </con:parameters>
             <con:parameterOrder>
               <con:entry>id</con:entry>
@@ -8948,6 +9217,9 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -9025,7 +9297,7 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
             <con:parameters>
               <con:entry key="iv-user" value="4519003153690821"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="10882"/>
+              <con:entry key="id" value="10959"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -9038,6 +9310,9 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -9142,7 +9417,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters>
               <con:entry key="iv-user" value="saimaple/331453704"/>
-              <con:entry key="surrogateId" value="4519003153690821"/>
+              <con:entry key="surrogateId" value="6014058754"/>
               <con:entry key="channel" value="DS"/>
             </con:parameters>
             <con:environmentSpec>
@@ -9156,6 +9431,9 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -9201,7 +9479,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
             <con:parameters>
               <con:entry key="StartDate" value="2018-09-10"/>
               <con:entry key="iv-user" value="saimaple/331453704"/>
-              <con:entry key="surrogateId" value="4519003153690821"/>
+              <con:entry key="surrogateId" value="6014058754"/>
               <con:entry key="AccountToken" value="ALL"/>
               <con:entry key="channel" value="DS"/>
               <con:entry key="EndDate" value="2018-09-17"/>
@@ -9217,6 +9495,9 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -9288,6 +9569,9 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -9330,7 +9614,7 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters>
               <con:entry key="iv-user" value="saimaple\331453704"/>
-              <con:entry key="surrogateId" value="4519003153690821"/>
+              <con:entry key="surrogateId" value="6014058754"/>
               <con:entry key="channel" value="DS"/>
             </con:parameters>
             <con:environmentSpec>
@@ -9344,6 +9628,9 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -9414,9 +9701,9 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters>
               <con:entry key="iv-user" value="saimaple\331453704"/>
-              <con:entry key="surrogateId" value="4519003153690821"/>
+              <con:entry key="surrogateId" value="6014058754"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="10883"/>
+              <con:entry key="id" value="10960"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -9429,6 +9716,9 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -9490,9 +9780,9 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
             <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
             <con:parameters>
               <con:entry key="iv-user" value="saimaple\331453704"/>
-              <con:entry key="surrogateId" value="4519003153690821"/>
+              <con:entry key="surrogateId" value="6014058754"/>
               <con:entry key="channel" value="DS"/>
-              <con:entry key="id" value="10883"/>
+              <con:entry key="id" value="10960"/>
             </con:parameters>
             <con:environmentSpec>
               <con:entry environmentId="22c755c0-fbd6-4bfc-a606-f7165df2b880">
@@ -9505,6 +9795,9 @@ assert (response != null) && (response != "") && (response != []):"Assertion fai
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -9666,6 +9959,9 @@ assert (pacInstructionId != null) && (pacInstructionId != "") && (confirmationNu
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
           </con:restRequest>
         </con:config>
@@ -9737,6 +10033,9 @@ assert (response != null) &amp;&amp; (response != "") &amp;&amp; (response != []
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -9848,6 +10147,9 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
             </con:environmentSpec>
@@ -9963,7 +10265,52 @@ assert (confirmationNumber != null) && (confirmationNumber != "") && (fromAccoun
               <con:entry environmentId="8e57a952-f517-4469-bd00-747b9b890400">
                 <con:authProfile>Inherit From Parent</con:authProfile>
               </con:entry>
+              <con:entry environmentId="dd75a302-e64e-4e6a-ba35-f17a291c387e">
+                <con:authProfile>Inherit From Parent</con:authProfile>
+              </con:entry>
             </con:environmentSpec>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="SarrogateID" id="43e56563-228c-4057-8ad1-1da83d2d4f94">
+        <con:settings/>
+        <con:config service="REST Service 1" resourcePath="/UJ40/IdAttrRestAPI/v1/inq" methodName="POST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="SarrogateID" id="143473dc-f9cc-4348-adbb-4d9b8faa0cb0" mediaType="application/x-www-form-urlencoded" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>https://qa-apigw-int.saifg.rbc.com</con:endpoint>
+            <con:request>{
+    "idAttrInqRqHdr": {
+      "rqUID": "5fed904a-8513-40be-b0f8-74bbe16032bd",
+      "clientAppName": "N600"
+    },
+    "incIdType": [
+      "com.investcloud"
+    ],
+    "idSet": [
+               {
+               "id": [
+        {
+          "idType": "com.rbc.fg.cis",
+          "idValue": "4519003153690821"
+        }
+               ]
+               }
+    ]
+  }</con:request>
+            <con:originalUri>https://qa-apigw-int.saifg.rbc.com/UJ40/IdAttrRestAPI/v1/inq</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters>
+              <entry key="Authorization" value="RBC rbc_app_id=OuJnu8ERCMvFoUGrPmujtpmki7v9dbl4" xmlns="http://eviware.com/soapui/config"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>Authorization</con:entry>
+            </con:parameterOrder>
           </con:restRequest>
         </con:config>
       </con:testStep>
